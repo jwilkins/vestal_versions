@@ -5,7 +5,7 @@ module VestalVersions
     extend ActiveSupport::Concern
 
     # Adds an instance method which allows version tagging through the parent object.
-    module InstanceMethods
+    #module InstanceMethods
       # Accepts a single string argument which is attached to the version record associated with
       # the current version number of the parent object.
       #
@@ -18,7 +18,7 @@ module VestalVersions
         v = versions.at(version) || versions.build(:number => 1)
         v.tag!(tag)
       end
-    end
+    #end
 
     # Instance methods included into VestalVersions::Version to enable version tagging.
     module VersionMethods

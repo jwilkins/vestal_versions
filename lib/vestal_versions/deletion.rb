@@ -23,7 +23,7 @@ module VestalVersions
       end
     end
 
-    module InstanceMethods
+    #module InstanceMethods
       private
 
         def delete_version?
@@ -34,6 +34,6 @@ module VestalVersions
           create_version({:modifications => attributes, :number => last_version + 1, :tag => 'deleted'})
         end
 
-    end
+    #end
   end
 end

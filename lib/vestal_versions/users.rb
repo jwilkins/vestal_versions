@@ -11,7 +11,7 @@ module VestalVersions
 
     # Methods added to versioned ActiveRecord::Base instances to enable versioning with additional
     # user information.
-    module InstanceMethods
+    #module InstanceMethods
 
       private
       # Overrides the +version_attributes+ method to include user information passed into the
@@ -19,7 +19,7 @@ module VestalVersions
       def version_attributes
         super.merge(:user => updated_by)
       end
-    end
+    #end
 
     # Instance methods added to VestalVersions::Version to accomodate incoming user information.
     module VersionMethods

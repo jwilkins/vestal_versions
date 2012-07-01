@@ -12,7 +12,7 @@ module VestalVersions
     # Control blocks are called on ActiveRecord::Base instances as to not cause any conflict with
     # other instances of the versioned class whose behavior could be inadvertently altered within
     # a control block.
-    module InstanceMethods
+    #module InstanceMethods
       # The +skip_version+ block simply allows for updates to be made to an instance of a versioned
       # ActiveRecord model while ignoring all new version creation. The <tt>:if</tt> and
       # <tt>:unless</tt> conditions (if given) will not be evaulated inside a +skip_version+ block.
@@ -160,7 +160,7 @@ module VestalVersions
         append_version?
       end
 
-    end
+    #end
     module ClassMethods
       # The +skip_version+ block simply allows for updates to be made to an instance of a versioned
       # ActiveRecord model while ignoring all new version creation. The <tt>:if</tt> and

@@ -27,7 +27,7 @@ module VestalVersions
     end
 
     # Instance methods that determine whether to save a version and actually perform the save.
-    module InstanceMethods
+    #module InstanceMethods
       private
         # Returns whether an initial version should be created upon creation of the parent record.
         def create_initial_version?
@@ -88,6 +88,6 @@ module VestalVersions
         def version_attributes
           {:modifications => version_changes, :number => last_version + 1}
         end
-    end
+    #end
   end
 end

@@ -11,7 +11,7 @@ module VestalVersions
 
     # Methods available to versioned ActiveRecord::Base instances in order to manage changes used
     # for version creation.
-    module InstanceMethods
+    #module InstanceMethods
       # Collects an array of changes from a record's versions between the given range and compiles
       # them into one summary hash of changes. The +from+ and +to+ arguments can each be either a
       # version number, a symbol representing an association proxy method, a string representing a
@@ -55,7 +55,7 @@ module VestalVersions
         def reset_version_changes
           @version_changes = nil
         end
-    end
+    #end
 
     # Instance methods included into Hash for dealing with manipulation of hashes in the specific
     # format of ActiveRecord::Base#changes.

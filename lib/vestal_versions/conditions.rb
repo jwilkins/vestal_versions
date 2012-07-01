@@ -25,7 +25,7 @@ module VestalVersions
 
     # Instance methods that determine based on the <tt>:if</tt> and <tt>:unless</tt> conditions,
     # whether a version is to be create or updated.
-    module InstanceMethods
+    #module InstanceMethods
       private
         # After first determining whether the <tt>:if</tt> and <tt>:unless</tt> conditions are
         # satisfied, the original, unaliased +create_version?+ method is called to determine
@@ -52,6 +52,6 @@ module VestalVersions
         def version_conditions_met?
           vestal_versions_options[:if].all?{|p| p.call(self) } && !vestal_versions_options[:unless].any?{|p| p.call(self) }
         end
-    end
+    #end
   end
 end
